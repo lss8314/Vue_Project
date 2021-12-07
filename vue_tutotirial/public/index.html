@@ -6,7 +6,9 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+     
+    </div>
 
     <div id= "app-2">
     <span v-bind:title = "message">
@@ -31,10 +33,27 @@
       <button v-on:click = 'reverseMessage'>메세지 뒤집기</button>
     </div>
 
-  </body>
+    <div id="app-6">
+    <ol>
+    <todo-item></todo-item>
+    </ol>
+    </div>
 
-  <script>
-window.onload = function () {    
+    <div id="app-7">
+      <ol>
+        <todo-item 
+         v-for="item in groceryList"
+         v-bind:todo="item"
+         v-bind:key='item.id'
+        ></todo-item>
+      </ol>
+    </div>
+
+  </body>
+  <base href="/">
+<script src= "index.js"></script>
+
+  <script>   
 
   var app2 = new Vue({
     el : '#app-2',
@@ -56,8 +75,7 @@ window.onload = function () {
       todos: [
           { text : '아침에 일어나서 세수'},
           { text : '점심엔 배고프니 식사'},
-          { text : '저녁엔 피곤하니 수면'},  
-          { text : '새벅엔 출출하니 야식'}
+          { text : '저녁엔 피곤하니 수면'}
       ]
     }
   })
@@ -75,6 +93,5 @@ window.onload = function () {
     }  
   })
 
-}
   </script>
 </html>

@@ -1,7 +1,7 @@
 <template>
 	
 	<div id= "valeu">
-		<h2 >{{a2}}</h2>
+		<h2 ></h2>
 	</div>
 </template>
 
